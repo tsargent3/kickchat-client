@@ -16,6 +16,7 @@ export const getChannelData = async (channel: string) => {
     const jsonContent: KickChannelInfo = await page.evaluate(() => {
       const bodyElement = document.querySelector("body");
       const bodyText = bodyElement ? bodyElement.textContent : null;
+      console.log(bodyText);
       return bodyText ? JSON.parse(bodyText) : null;
     });
     await browser.close();
