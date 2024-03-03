@@ -5,6 +5,7 @@
   "author": "retconned <retcnned@gmail.com>",
   "scripts": {
     "dev": "nodemon src/index.ts",
+    "debug": "nodemon --inspect src/index.ts",
     "prd": "node dist/index.js",
     "build": "tsc -p .",
     "prd:clean": "rm -rf dist"
