@@ -8,7 +8,7 @@ export const runtimeChannelData = new Map<number, string>();
 
 export const getChannelData = async (channel: string) => {
   const puppeteerExtra = puppeteer.use(StealthPlugin()) as typeof puppeteer;
-  const browser = await puppeteerExtra.launch({ headless: "new" });
+  const browser = await puppeteerExtra.launch({ headless: "new", args: ['--no-sandbox'] });
   const page = await browser.newPage();
   await page.goto(`https://kick.com/api/v2/channels/${channel}`);
   await page.waitForSelector("body");
