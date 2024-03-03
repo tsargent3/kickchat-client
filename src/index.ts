@@ -97,4 +97,4 @@ const client = async (channels: string[]) => {
   connectToDynamicChannels(chatroomIds);
 };
 
-client(["buddha", "xqc", "adinross"]);
+client(["markolasso"]);
